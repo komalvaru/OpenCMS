@@ -1,5 +1,7 @@
 <?php
+
 	require_once('includes.php');
+
 	use Facebook\GraphObject;
 	use Facebook\GraphSessionInfo;
 	use Facebook\Entities\AccessToken;
@@ -14,8 +16,10 @@
 	use Facebook\FacebookRequestException;
 	use Facebook\FacebookAuthorizationException;
 
-	FacebookSession::setDefaultApplication($app_id, $secret_id);
-	$session = $_SESSION['login_session'];
+	FacebookSession::setDefaultApplication($fb_app_id, $fb_secret_id);
+
+	$session = $_SESSION['fb_login_session'];
+
 	$zip_folder = "";
 	$album_download_directory = 'libs/resources/albums/'.uniqid().'/';
 	mkdir($album_download_directory, 0777);
@@ -24,6 +28,7 @@
 		$request_album_photos = new FacebookRequest($session,'GET', '/'.$album_id.'/photos?fields=source');
 		$response_album_photos = $request_album_photos->execute();			
 		$album_photos = $response_album_photos->getGraphObject()->asArray();
+
 		$album_directory = $album_download_directory.$album_name;
 		if ( !file_exists( $album_directory ) ) {
 			mkdir($album_directory, 0777);
