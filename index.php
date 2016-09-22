@@ -113,21 +113,29 @@
 							<div class="col-xs-12 col-sm-2 text-center pull-right">
 							<br>
 							<br>
-								<button class="btn btn-default col-sm-12 col-xs-12" id="menu1" type="button" data-toggle="dropdown">
-									<img src="<?php echo 'https://graph.facebook.com/'.$user_id.'/picture';?>" id="user_photo" class="img-circle" />
+								<button class="btn btn-default col-sm-12 col-xs-12" id="menu1" type="button" data-toggle="dropdown" style="width:100%,height:150%">
 									<span class="caret"></span>
 								</button>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+								<ul class="dropdown-menu" role="menu" aria-labelledby="menu1" value="features">
 								  <li role="presentation"><a href="http://facebook.com/" target="_blanck">Timeline</a></li>
 								  <li role="presentation"><a href="http://facebook.com/<?=$user_id; ?>" target="_blanck">Profile</a></li>
 								  <li role="presentation"><a href="logout.php" >Logout</a></li>
 								</ul>	
 							</div>
 							
-							<div class="col-xs-12 col-sm-3 text-center" align="center">
+							<div class="col-xs-6 col-sm-3 text-center" align="center">
+							<br>
+							<br>
+								<div class="row">
+								<img src="<?php echo 'https://graph.facebook.com/'.$user_id.'/picture';?>" id="user_photo" class="img-circle" />
+									</div>
+							</div>	
+								<div class="col-xs-12 col-sm-3 text-center" align="center">
+									<div class="row">
 								<h3><a class="" href="http://facebook.com/" id="username">
 									<span style="margin-left: 5px;color:black;"><?php echo $user_name;?></span>
 								</a></h3>
+								</div>
 							</div>
 							<br>
 						</div>
