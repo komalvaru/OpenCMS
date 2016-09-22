@@ -1,4 +1,4 @@
-Live Demo: https://rtcamp-assignment.herokuapp.com/
+Live Demo: http://www.vocabaugmentor.com/rtcamp/final1
 
 
 Library Used:
