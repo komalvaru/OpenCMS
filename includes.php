@@ -20,7 +20,7 @@
 	$fb_app_id = '317396045294593'; 
 	$fb_secret_id = '5743b0336859d40f7bf7c4625762ad42'; 
 
-	$fb_login_url = 'http://localhost/final1/index.php'; 
+	$fb_login_url = 'http://www.vocabaugmentor.com/rtcamp/final1/index.php'; 
 	$fb_logout_url = '';
 
 	session_start();
